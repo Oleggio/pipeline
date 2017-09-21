@@ -58,10 +58,9 @@ deploy:
     - internal/docker-push:
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
-      cmd: /pipeline/source/hello
-      port: "8080"
+      cmd: /pipeline/main
       tag: latest
-      repository: cloudnativego/book-hello
+      repository: oleggio/book
       registry: https://registry.hub.docker.com
 
     - cng/cf-deploy:
