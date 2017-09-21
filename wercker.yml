@@ -56,9 +56,8 @@ build:
 deploy:
   steps:
     - internal/docker-push:
-      username: $DOCKER_USERNAME
-      password: $DOCKER_PASSWORD
-      entrypoint: my-entrypoint
-      tag: latest
-      repository: oleggio/book
-      registry: https://registry.hub.docker.com
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        tag: latest
+        repository: oleggio/book
+        registry: https://registry.hub.docker.com
