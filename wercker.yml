@@ -62,3 +62,4 @@ deploy:
         repository: oleggio/book
         registry: https://registry.hub.docker.com
 
+
