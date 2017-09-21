@@ -58,16 +58,7 @@ deploy:
     - internal/docker-push:
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
-      cmd: /pipeline/main
+      entrypoint: my-entrypoint
       tag: latest
       repository: oleggio/book
       registry: https://registry.hub.docker.com
-
-    - cng/cf-deploy:
-      api: $API
-      user: $USER
-      password: $PASSWORD
-      org: $ORG
-      space: $SPACE
-      appname: wercker-step-hello
-      docker_image: cloudnativego/book-hello
